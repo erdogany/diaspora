@@ -26,8 +26,10 @@ class AspectsController < ApplicationController
 
   def create
     @aspect = current_user.aspects.create(params[:aspect])
+    @aspect.contacts_visible = 0
+    @aspect.save
 
-    if @aspect.valid?
+    if @aspect.valid?      
       flash[:notice] = I18n.t('aspects.create.success', :name => @aspect.name)
       if current_user.getting_started
         redirect_to :back
@@ -52,11 +54,11 @@ class AspectsController < ApplicationController
           redirect_to :back
         end
       end
-    end
+    end        
   end
 
   def new
-    @aspect = Aspect.new
+    @aspect = Aspect.new           
     @person_id = params[:person_id]
     @remote = params[:remote] == "true"
     respond_to do |format|

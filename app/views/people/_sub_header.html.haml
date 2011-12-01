@@ -22,11 +22,11 @@
       - if user_signed_in? && person == current_user.person
         %span.hover_edit
           = link_to t('.edit'), edit_profile_path
-    - else
-      - if user_signed_in? && person == current_user.person
-        %i
-          = t('.you_have_no_tags')
-          %span.add_tags
-            = link_to t('.add_some'), edit_profile_path
+    -# - else
+      -# - if user_signed_in? && person == current_user.person
+        -# %i
+          -# = t('.you_have_no_tags')
+          -# %span.add_tags
+            -# = link_to t('.add_some'), edit_profile_path
 
 %hr

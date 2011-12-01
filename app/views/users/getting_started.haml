@@ -23,11 +23,11 @@
         %h2
           = t(".who_are_you")
 
-      .row
-        %p
-          = t('.we_can_speed_things_up')
-          = link_to t('.hooking_up_fb'), "auth/facebook?callback_url=#{getting_started_url}"
-          = t('.what_facebook_does')
+      -# .row
+        -# %p        
+          -# = t('.we_can_speed_things_up')
+          -# = link_to t('.hooking_up_fb'), "auth/facebook?callback_url=#{getting_started_url}"
+          -# = t('.what_facebook_does')
 
       .row
         .span6
@@ -49,31 +49,32 @@
                 = render 'photos/new_profile_photo', :aspect => :getting_started, :person => current_user.person
       %br
       %br
+      .clearfix
+        %br
+        %br
+        %br
+        .input
+          = link_to "#{t('.awesome_take_me_to_diaspora')} »", "#", :id => "awesome_button", :class => "btn primary"
 
-    .clearfix
-      .row
-        %h2
-          = t('.what_are_you_in_to')
+    -# .clearfix
+      -# .row
+        -# %h2
+          -# = t('.what_are_you_in_to')
+ 
+      -# .row
+        -# %p
+          -# = t('.hashtag_explanation')
+          -# %i
+            -# = t('.hashtag_suggestions')
 
-      .row
-        %p
-          = t('.hashtag_explanation')
-          %i
-            = t('.hashtag_suggestions')
+      -# .row
+        -# .span13
+          -# = form_tag(multiple_tag_followings_path, :method => 'post', :class => "tag_input search_form") do
+            -# %fieldset
+              -# .clearfix
+                -# = label_tag 'follow_tags', "Follow tags", :class => "bootstrapped"
+                -# .input
+                  -# = text_field_tag 'follow_tags', nil, :class => "nostrap"
 
-      .row
-        .span13
-          = form_tag(multiple_tag_followings_path, :method => 'post', :class => "tag_input search_form") do
-            %fieldset
-              .clearfix
-                = label_tag 'follow_tags', "Follow tags", :class => "bootstrapped"
-                .input
-                  = text_field_tag 'follow_tags', nil, :class => "nostrap"
-
-            .clearfix
-              %br
-              %br
-              %br
-              .input
-                = link_to "#{t('.awesome_take_me_to_diaspora')} »", "#", :id => "awesome_button", :class => "btn primary"
+      
 

@@ -1,6 +1,6 @@
 class AddContactsVisible < ActiveRecord::Migration
   def self.up
-    add_column :aspects, :contacts_visible, :boolean, :default => true, :null => false
+    add_column :aspects, :contacts_visible, :boolean, :default => false, :null => false
     add_index :aspects, [:user_id, :contacts_visible]
 
     ActiveRecord::Base.connection.execute <<-SQL
