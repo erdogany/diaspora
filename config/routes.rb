@@ -67,7 +67,7 @@ Diaspora::Application.routes.draw do
   resource :token, :only => :show
 
 
-  # Users and people
+  # Users and
 
   resource :user, :only => [:edit, :update, :destroy], :shallow => true do
     get :getting_started_completed
@@ -123,7 +123,7 @@ Diaspora::Application.routes.draw do
   resources :people, :except => [:edit, :update] do
     resources :status_messages
     resources :photos
-    get  :contacts
+    # get  :contacts
     get "aspect_membership_button" => :aspect_membership_dropdown, :as => "aspect_membership_button"
     collection do
       post 'by_handle' => :retrieve_remote, :as => 'person_by_handle'

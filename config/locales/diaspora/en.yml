@@ -149,10 +149,10 @@ en:
       list_not_empty: "List not empty"
       are_you_sure: "Are you sure you want to delete this list?"
     seed:
-      family: "Family"
-      work: "Work"
+      family: "My Team"
+      work: "My Company"
       acquaintances: "Acquaintances"
-      friends: "Friends"
+      friends: "Business Contacts"
     index:
       donate: "Donate"
       keep_us_running: "Keep %{pod} running fast and buy servers their coffee fix with a monthly donation!"

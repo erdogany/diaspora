@@ -106,8 +106,8 @@
       - if @aspsect == :getting_started || @page == :logged_out
         = yield
       - else
-        .span-24.last{:style=> "#{yield(:break_the_mold)}"}
-          = yield
+        -# .span-24.last{:style=> "#{yield(:break_the_mold)}"}
+        = yield
 
     %footer
       .container
