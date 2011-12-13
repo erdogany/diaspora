@@ -38,11 +38,13 @@ Diaspora.Pages.UsersGettingStarted = function() {
     $("#awesome_button").bind("click", function(evt){
       evt.preventDefault();
       
-      $('.tag_input').submit();
+      //$('.tag_input').submit();
 
       /* flash message prompt */
       var message = Diaspora.I18n.t("getting_started.preparing_your_stream");
       Diaspora.page.flashMessages.render({success: true, notice: message});
+      
+      window.location = '/stream';
 
     });
 

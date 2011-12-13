@@ -54,27 +54,25 @@
         %br
         %br
         .input
-          = link_to "#{t('.awesome_take_me_to_diaspora')} »", "#", :id => "awesome_button", :class => "btn primary"
+          = link_to "#{t('.awesome_take_me_to_diaspora')} »", "/stream", :id => "awesome_button", :class => "btn primary"
 
-    -# .clearfix
-      -# .row
-        -# %h2
-          -# = t('.what_are_you_in_to')
- 
-      -# .row
-        -# %p
-          -# = t('.hashtag_explanation')
-          -# %i
-            -# = t('.hashtag_suggestions')
-
-      -# .row
-        -# .span13
-          -# = form_tag(multiple_tag_followings_path, :method => 'post', :class => "tag_input search_form") do
-            -# %fieldset
-              -# .clearfix
-                -# = label_tag 'follow_tags', "Follow tags", :class => "bootstrapped"
-                -# .input
-                  -# = text_field_tag 'follow_tags', nil, :class => "nostrap"
+      -# .clearfix
+        -# .row
+          -# %h2
+            -# = t('.what_are_you_in_to')
+        -# .row
+          -# %p
+            -# = t('.hashtag_explanation')
+            -# %i
+              -# = t('.hashtag_suggestions')
+        -# .row
+          -# .span13
+            -# = form_tag(multiple_tag_followings_path, :method => 'post', :class => "tag_input search_form") do
+              -# %fieldset
+                -# .clearfix
+                  -# = label_tag 'follow_tags', "Follow tags", :class => "bootstrapped"
+                  -# .input
+                    -# = text_field_tag 'follow_tags', nil, :class => "nostrap"
 
       
 
