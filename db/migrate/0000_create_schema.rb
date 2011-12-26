@@ -116,6 +116,7 @@ class CreateSchema < ActiveRecord::Migration
       t.boolean :searchable, :default => true
       t.integer :person_id
       t.timestamps
+      t.string :company
     end
     add_index :profiles, [:first_name, :searchable]
     add_index :profiles, [:last_name, :searchable]

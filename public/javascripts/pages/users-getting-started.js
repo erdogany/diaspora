@@ -21,11 +21,11 @@ Diaspora.Pages.UsersGettingStarted = function() {
       Diaspora.page.flashMessages.render({success: true, notice: message});
     });
 
-    $("#profile_first_name").bind("change", function(){
+    /*$("#profile_first_name").bind("change", function(){
       $(this).data("cachedValue", $(this).val());
       $('#edit_profile').submit();
       $('#gs-name-form-spinner').removeClass("hidden");
-    });
+    });*/
 
     $("#profile_first_name").bind("blur", function(){
       $(this).removeClass("active_input");
@@ -38,6 +38,9 @@ Diaspora.Pages.UsersGettingStarted = function() {
     $("#awesome_button").bind("click", function(evt){
       evt.preventDefault();
       
+      $(this).data("cachedValue", $(this).val());
+      $('#edit_profile').submit();
+      $('#gs-name-form-spinner').removeClass("hidden");
       //$('.tag_input').submit();
 
       /* flash message prompt */

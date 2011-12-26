@@ -4,6 +4,9 @@
 
 - content_for :head do
   = include_javascripts :profile
+  
+%script{:type => "text/javascript", :src => "http://platform.linkedin.com/in.js"} api_key: n9pw5ft37r67
+
 
 %br
 
@@ -17,9 +20,17 @@
     .clearfix
       %br
       %br
-
+    
     .clearfix
       .row
+        %h2 Sing in with LinkedIn for quick fill up:
+        %br
+        %script{ :type => "IN/Login"} Hello, <?js= firstName ?> <?js= lastName ?>
+        %br
+        
+    .clearfix
+      .row
+        %br
         %h2
           = t(".who_are_you")
 
@@ -34,19 +45,38 @@
           = form_tag profile_path, :method => :put, :remote => true, :id => 'edit_profile' do
             %fieldset
               .clearfix
-                = label_tag 'profile[first_name]', "Your name", :class => "bootstrapped"
+                = label_tag :your_photo, "Your photo", :class => "bootstrapped"
+                .input{:style => "position:relative;"}
+                  = render 'photos/new_profile_photo', :aspect => :getting_started, :person => current_user.person
+                
+              .clearfix
+                = label_tag 'profile[first_name]', "First name *", :class => "bootstrapped"
                 .input
                   = text_field_tag 'profile[first_name]', current_user.person.profile.first_name
                   = image_tag 'ajax-loader.gif', :id => "gs-name-form-spinner", :class => "hidden"
+                %br
+                = label_tag 'profile[last_name]', "Last name *", :class => "bootstrapped"
+                .input
+                  = text_field_tag 'profile[last_name]', current_user.person.profile.last_name
+                  = image_tag 'ajax-loader.gif', :id => "gs-name-form-spinner", :class => "hidden"                  
+                
 
               %span.saved{:class => "hidden"}
                 = image_tag 'icons/check_yes_ok.png'
-                = t(".saved")
-
+                = t(".saved")            
+            
+            %br
+              = label_tag 'company', "Company", :class => "bootstrapped"
+              .input
+                = text_field_tag 'profile[company]', current_user.person.profile.company
+                = image_tag 'ajax-loader.gif', :id => "gs-name-form-spinner", :class => "hidden"
+            
             .clearfix
-              = label_tag :your_photo, "Your photo", :class => "bootstrapped"
-              .input{:style => "position:relative;"}
-                = render 'photos/new_profile_photo', :aspect => :getting_started, :person => current_user.person
+              = label_tag 'profile[bio]', "Brief introduction", :class => "bootstrapped"
+              .input{:style => "position:relative;"} 
+                = text_area_tag 'profile[bio]', current_user.person.profile.bio, :class => "50x10"
+                -# %textarea{:style => "width: 400px; height: 100px;"}              
+                
       %br
       %br
       .clearfix

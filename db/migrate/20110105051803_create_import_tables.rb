@@ -125,6 +125,7 @@ class CreateImportTables < ActiveRecord::Migration
       t.boolean :searchable, :default => true
       t.string :person_mongo_id
       t.timestamps
+      t.string :company
     end
     add_index :mongo_profiles, [:first_name, :searchable]
     add_index :mongo_profiles, [:last_name, :searchable]
