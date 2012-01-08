@@ -5,7 +5,9 @@
 - content_for :head do
   = include_javascripts :profile
   
-%script{:type => "text/javascript", :src => "http://platform.linkedin.com/in.js"} api_key: n9pw5ft37r67
+%script{:type => "text/javascript", :src => "http://platform.linkedin.com/in.js" } 
+  api_key: n9pw5ft37r67
+  onLoad: onLinkedInLoad
 
 
 %br
@@ -66,9 +68,15 @@
                 = t(".saved")            
             
             %br
-              = label_tag 'company', "Company", :class => "bootstrapped"
+              = label_tag 'company', "Company *", :class => "bootstrapped"
               .input
                 = text_field_tag 'profile[company]', current_user.person.profile.company
+                = image_tag 'ajax-loader.gif', :id => "gs-name-form-spinner", :class => "hidden"
+            
+            %br
+              = label_tag 'location', "Location *", :class => "bootstrapped"
+              .input
+                = text_field_tag 'profile[location]', current_user.person.profile.location
                 = image_tag 'ajax-loader.gif', :id => "gs-name-form-spinner", :class => "hidden"
             
             .clearfix
