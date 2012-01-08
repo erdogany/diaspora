@@ -17,7 +17,7 @@
     = person.diaspora_handle
 
   .description
-    = person.profile.bio    
+    = person.profile.company    
     -# - if !person.profile.tag_string.blank? && user_signed_in?
       -# = Diaspora::Taggable.format_tags(person.profile.tag_string)
       -# - if user_signed_in? && person == current_user.person
