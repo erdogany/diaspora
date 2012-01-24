@@ -390,8 +390,8 @@ en:
 
   notifications:
     started_sharing:
-      zero: "%{actors} started sharing with you."
-      one: "%{actors} started sharing with you."
+      zero: "%{actors} added you as contact and will receive your public posts. If you want to share more click on his/her name and add to one of your lists."
+      one: "%{actors} added you as contact and will receive your public posts. If you want to share more click on his/her name and add to one of your lists."
       two: "%{actors} started sharing with you."
       few: "%{actors} started sharing with you."
       many: "%{actors} started sharing with you."

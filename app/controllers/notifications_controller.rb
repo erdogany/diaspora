@@ -39,6 +39,7 @@ class NotificationsController < VannaController
       n[:translation] = notification_message_for(n)
       n[:translation_key] = n.popup_translation_key
       n[:target] = n.translation_key == "notifications.mentioned" ? n.target.post : n.target
+      # n[:hover_card] = 
     end
     group_days = notifications.group_by{|note| I18n.l(note.created_at, :format => I18n.t('date.formats.fullmonth_day')) }
     {:group_days => group_days, :notifications => notifications}
