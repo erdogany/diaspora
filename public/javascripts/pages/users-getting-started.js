@@ -52,16 +52,18 @@ Diaspora.Pages.UsersGettingStarted = function() {
       } 
       
       
-      $('#edit_profile').submit();
-      $('#gs-name-form-spinner').removeClass("hidden");
-      //$('.tag_input').submit();
+      $('#edit_profile').submit(function() {
+      	$('#gs-name-form-spinner').removeClass("hidden");
+      	//$('.tag_input').submit();
 
-      /* flash message prompt */
-      var message = Diaspora.I18n.t("getting_started.preparing_your_stream");
-      Diaspora.page.flashMessages.render({success: true, notice: message});
+      	/* flash message prompt */
+      	var message = Diaspora.I18n.t("getting_started.preparing_your_stream");
+    	Diaspora.page.flashMessages.render({success: true, notice: message});
       
-      window.location = '/stream';
-
+	    window.location = '/stream';
+	
+      });
+      
     });
 
     /* ------ */
