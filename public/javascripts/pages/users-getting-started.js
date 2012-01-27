@@ -50,10 +50,11 @@ Diaspora.Pages.UsersGettingStarted = function() {
       	
       	return;
       } 
-      
-      
-      $('#edit_profile').submit();
-      
+            						
+      $.post('/profile', $(edit_profile).serialize(), function(data){
+      	window.location = '/stream'
+      });
+            
     });
 
     /* ------ */
