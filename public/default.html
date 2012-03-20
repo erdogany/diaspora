@@ -1,77 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
 		<title>ShipBro</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Le styles -->
+		<link href="./stylesheets/bootstrap/bootstrap.css" rel="stylesheet">
 		<style type="text/css">
-			ol {
-				padding: 0;
+			body {
+				padding-top: 60px;
+				padding-bottom: 40px;
 			}
-			h1, h2, h3 {
-				letter-spacing: -1px;
-			}
-			h1 {
-				color: #111;
-				text-shadow: 2px 0 0 white;
-			}
-			h2 {
-				color: #444;
-			}
-			h3 {
-				color: #777;
-			}
-			p {
-				font-family: 'helvetica';
-			}
-			#links {
-				margin: 0;
-				padding: 0;
-			}
-			#links .section {
-				margin: 0;
-				padding: 0;
-				display: inline-block;
-				vertical-align: top;
-				width: 24%;
-				max-width: 24%;
-			}
-			#login-link {
-				float: right;
-				padding: 3px 5px;
-				background: #f0f0f0;
-				border: 1px solid #ddd;
-				border-radius: 3px;
-				font-weight: bold;
-			}
-			#login-link:hover {
-				text-decoration: none;
-				background-color: #fff;
-			}
-
 		</style>
+		<link href="./stylesheets/bootstrap/bootstrap-responsive.css" rel="stylesheet">
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 	</head>
 	<body>
-		<div id="page" class="container" style="margin-bottom: -45px">
-			<div id="header" style="margin-bottom:24px;" class="span-24">
-				<a id="login-link" href="login">Log In</a>
-				<img src='images/logo_caps.png'/>
-			</div>
-			<hr>
-			<div id="getting-started" class="span-24">
-				<h2>Welcome!</h2>
-				<h3>You're about to change the way you connect with your contacts!</h3>
-				<hr />
-			</div>
-			<div id="innercontent" class="span-24">
-				<div id="whats" class="span-10">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<div class="container">
+			<!-- Main hero unit for a primary marketing message or call to action -->
+			<div class="hero-unit">
+				<div style="span5">
+					<h1 style="color: #007DCC" >ShipBro</h1>
+					<p>
+						Follow the market activity and see running "Circulation Emails" directly from your account.
+						Take your place in the new Maritime Business World.You are about to change the way you run your business				</p>
+					<p>
+						<a class="btn btn-primary btn-large" href="users/sign_up">Sign up for beta &raquo;</a>
+					</p>
 				</div>
-				<div id="image" class="span-14 last">
-					<img src="images/main2.png" />
+			</div>
+			<!-- Example row of columns -->
+			<div class="row">
+				<div class="span4">
+					<img src="images/feature1.png" alt="feature 1" style="border-radius: 6px;
+					border: 1px solid #DDD;
+					-webkit-box-shadow: 0 1px 0px #ccc;"/>
+				</div>
+				<div class="span4">
+					<img src="images/feature2.png" alt="feature 2" style="border-radius: 6px;
+					border: 1px solid #DDD;
+					-webkit-box-shadow: 0 1px 0px #ccc;"/>
+				</div>
+				<div class="span4">
+					<img src="images/feature3.png" alt="feature 3" style="border-radius: 6px;
+					border: 1px solid #DDD;
+					-webkit-box-shadow: 0 1px 0px #ccc;"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span4">
+					<h2 style="color: #007DCC">Manage Your Circulation Lists</h2>
+					<p>
+						 You don't need to access your email system or carry your devices with you at all times, you can manage all business deals, circulatiion lists directly from your account anywhere in the world with any device you can access internet.
+					</p>
+				</div>
+				<div class="span4">
+					<h2 style="color: #007DCC">Watch the Market Dynamics </h2>
+					<p>
+						You can follow all the offers, available ships and loads with full privacy. Just like the way you like, you have the full control yet no interruption with your current business models
+					</p>
+				</div>
+				<div class="span4">
+					<h2 style="color: #007DCC">Control Your Privacy</h2>
+					<p>
+						No one can see your contacts.No one can access your data. Only the people specifically listed in related lists can access your post when you decide to inform them.You decide who you are going to share your offers 
+					</p>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 50px;">
+				<div class="span4">
+					<img src="images/feature1.png" alt="feature 1" style="border-radius: 6px;
+					border: 1px solid #DDD;
+					-webkit-box-shadow: 0 1px 0px #ccc;"/>
+				</div>
+				<div class="span4">
+					<img src="images/feature2.png" alt="feature 2" style="border-radius: 6px;
+					border: 1px solid #DDD;
+					-webkit-box-shadow: 0 1px 0px #ccc;"/>
+				</div>
+				<div class="span4">
+					<img src="images/feature3.png" alt="feature 3" style="border-radius: 6px;
+					border: 1px solid #DDD;
+					-webkit-box-shadow: 0 1px 0px #ccc;"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span4">
+					<h2 style="color: #007DCC">No Automated Process</h2>
+					<p>
+						There will be no direct ship-load matchmaking. You can carry your brokering model as you like it .Business as usual. 
+					</p>
+				</div>
+				<div class="span4">
+					<h2 style="color: #007DCC">Free Your Email Systems </h2>
+					<p>
+						You don't need to deal with your thousands of circulation emails.You can just leave your main page on and see running market offers. Save your precious time and email resources. 
+					</p>
+				</div>
+				<div class="span4">
+					<h2 style="color: #007DCC"> Share & Collaborate </h2>
+					<p>
+						You can Fully collaborate with your team members , follow each team members acitivity and follow ups without cc emails or using any expensive collaboration software
+					</p>
 				</div>
 			</div>
 		</div>
+		<!-- /container -->
 	</body>
 </html>

@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(:version => 20111101202137) do
   add_index "aspect_visibilities", ["shareable_id", "shareable_type"], :name => "index_aspect_visibilities_on_shareable_id_and_shareable_type"
 
   create_table "aspects", :force => true do |t|
-    t.string   "name",                               :null => false
-    t.integer  "user_id",                            :null => false
+    t.string   "name",                                :null => false
+    t.integer  "user_id",                             :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "contacts_visible", :default => true, :null => false
+    t.boolean  "contacts_visible", :default => false, :null => false
     t.integer  "order_id"
   end
 
@@ -331,6 +331,7 @@ ActiveRecord::Schema.define(:version => 20111101202137) do
     t.integer  "person_id",                                         :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "company"
     t.string   "location"
     t.string   "full_name",        :limit => 70
   end
