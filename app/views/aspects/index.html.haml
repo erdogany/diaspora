@@ -45,6 +45,14 @@
   
   .section
     = render 'aspects/selected_contacts', :stream => @stream
+  
+  %hr  
+  
+  .section
+    %h5
+      = t('shared.invitations.invite_your_friends')
+    .content
+      = render "shared/invitations"
 
   -# .section
     -# %ul.left_nav
