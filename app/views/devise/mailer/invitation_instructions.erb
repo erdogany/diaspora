@@ -124,27 +124,11 @@
 						</table></td>
 					</tr>
 					<tr>
-						<td>
-						<table style="padding: 0pt 20px; background: rgb(255, 255, 255) none repeat scroll 0%; font-size: 16px; color: rgb(51, 51, 51); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
-							<tbody>
-								<tr>
-									<td style="padding: 20px 20px 0px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"> <%= t('.made_by_people', :strong_diaspora => content_tag(:strong, "DIASPORA*"), :jointeam => link_to(t('.join_team'), "https://github.com/diaspora/diaspora/wiki/Become-a-Contributor", :style =>"color: #3F8FBA; text-decoration: underline; font-weight: bold; font-size: 18px;", :target => "_blank"), :helpfund => link_to(t('.help_fund'), "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG4L6VYD8YGPU", :style =>"color: #3F8FBA; text-decoration: underline; font-weight: bold; font-size: 18px;", :target => "_blank")).html_safe %> </td>
-								</tr>
-							</tbody>
-						</table></td>
-					</tr>
-					<tr>
 						<td style="padding: 35px 20px 20px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"> <%= t('.love') %>
 						<br>
 						<%= t('.team_diaspora') %>
 						<br>
 						</td>
-					</tr>
-					<tr>
-						<td style="padding: 35px 40px; font-size: 11px; color: rgb(102, 102, 102); line-height: 16px;"> <% if AppConfig[:pod_uri].host.match(/joindiaspora.com/) %>
-						<%= t('.unsubscribe', :link => link_to(t('.here'), "http://joindiaspora.us1.list-manage.com/unsubscribe?u=d759919b94f9cdcf39d204f3f&id=7b5ceb2f8b", :style => "color: #3F8FBA; text-decoration: none;")).html_safe %>
-						<% end %>
-						<%= t('.email_us', :email => link_to(t('.email_address'), "mailto:questions@joindiaspora.com", :style => "color: #3F8FBA; text-decoration: none;")).html_safe %> </td>
 					</tr>
 				</tbody>
 			</table></td>
