@@ -10,8 +10,7 @@
 
   - if !current_user
     .right
-      %ul#landing_nav     
-        %li= link_to t('.about'), 'http://shipbro.com/about'
+      %ul#landing_nav             
         %li= link_to t('.login'), new_user_session_path, :class => 'login'
 
   - elsif (current_user || !@landing_page)
